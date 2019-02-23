@@ -43,7 +43,7 @@ class ContaPoupanca extends Conta
 
     public function aplicar($valor)
     {
-        echo '<hr>Aplicação efetuada <b>$valor</b> <ht>';
+        echo "<hr>Aplicação efetuada <b>$valor</b> <ht>";
         $this->depositar($valor);
     }
 }
@@ -56,12 +56,16 @@ $conta->depositar(1200);
 
 $contaPoupanca = new ContaPoupanca();
 $contaPoupanca->depositar(2000);
+$contaPoupanca->aplicar(2000);
+
 
 $contaPoupancaConjunta = new ContaPoupancaConjunta();
 $contaPoupancaConjunta->aplicar(100);
 
 echo '<pre>';
+echo '<hr>';
 var_dump($conta);
+echo '<hr>';
 var_dump($contaPoupanca);
 echo '<hr>';
 var_dump($contaPoupancaConjunta);
