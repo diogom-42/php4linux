@@ -24,13 +24,17 @@ class Conta
     {
         # code...
         $this->saldo += $valor;
+        echo '<hr>';
+        echo 'Deposito Efetuado Valor: ' . $valor; 
+        echo '<br>';
+        echo '<hr>';
     }
 
     /**
      * Retorna o saldo atual
      * @return float $saldo
      */
-    public function verSaldo()
+    public function verSaldo() : float
     {
         # code...
         return $this->saldo;
